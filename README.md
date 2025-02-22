@@ -1,1 +1,157 @@
-# e-commerce
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub| E-commerce </Em></title>
+    <link rel="stylesheet" href="Game_Hub.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <img src="image/game_hub_logo_1.jpg" width="125px" />
+          </div>
+          <nav>
+            <ul id="Menuitems">
+              <li><a href="">Home</a></li>
+              <li><a href="">product</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Content </a></li>
+              <li><a href="">Account</a></li>
+            </ul>
+          </nav>
+          <img src="image/gart new.png" width="30px" height="20px" />
+          <img src="image/menu.png" class="menu-icon" onclick="menutoggle()"/>
+
+        </div>
+    
+      </div>
+    </div>
+
+  <!-----------------------account page -------------------->
+  <div class="account-page">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="image/game_hub_logo_1.jpg" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                 <div class="form-btn">
+                    <span onclick="login()">login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="Indicator">
+                 </div>   
+                 <form id="LoginForm">
+                    <input type="text" placeholder="username">
+                    <input type="text" placeholder="password">
+                    <button type="submit" class="btn">login</button>
+                    <a href="">forgot password</a>
+                 </form>
+
+                 <form id="RegForm">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+                    
+                 </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+   
+
+    
+ 
+   
+    <!------------------------------------------------footer-------------->
+    <div class="footer">
+      <div class="small-container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and iOS</p>
+            <div class="app-logo">
+              <img src="image/google play.png" width="200px" />
+              <img src="image/apple store.png" width="200px" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="image/game_hub_logo_1.jpg" width="200px">
+            <h3>About Us</h3>
+            <p> Elevating Your Tech Experience with Cutting-Edge Gear</p>
+          </div> 
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Return Policy</li>
+              <li>Join Affliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Youtube</li>
+              <li>Twitter</li>
+            </ul>
+          </div>    
+        </div>
+        <hr>
+        <div class="copyright">
+          <p>Copyright &copy; 2023 Game Hub. All rights reserved | Designed by GameHub Team</p>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------------  js for toggle menu ------------->
+    <script>
+      var Menuitems = document.getElementById("Menuitems");
+      Menuitems.style.maxHeight = "0px";
+      function menutoggle(){
+        if(Menuitems.style.maxHeight == "0px"){
+          Menuitems.style.maxHeight = "200px";
+        }else{
+          Menuitems.style.maxHeight = "0px";
+        }
+      }
+
+    
+    </script>
+
+
+<!--------------------js for toogle form -------->
+
+<script>
+   var LoginForm = document.getElementById("LoginForm");
+   var RegForm = document.getElementById("RegForm");
+   
+
+   function login(){
+      RegForm.style.transform = "translateX(300px)";
+      LoginForm.style.transform = "translateX(300px)";
+   }
+            function register(){
+              RegForm.style.transform = "translateX(0xp)";
+              LoginForm.style.transform = "translateX(0xp)";
+            }
+</script>
+  </body>
+</html>
